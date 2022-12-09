@@ -1,0 +1,101 @@
+#frame {
+    width: 375px;
+    height: 667px;
+    background-color:antiquewhite;
+}
+
+
+#backBtn {
+    width: 55px;
+    height:55px;
+    border-radius: 16px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+#backImg {
+    width: 45px;
+    height: 45px;
+    background-image: url("../assets/backArrow.png");
+    background-size: auto 45px;
+    background-repeat: no-repeat;
+}
+
+#list {
+    padding: 5px;
+}
+.item {
+    margin: 12px;
+    display: flex;
+    justify-content: baseline;
+}
+.item text {
+    position: relative;
+    margin-left: 12px;
+    bottom: 4px;
+    font-family: "Courier New";
+}
+
+.toggle {
+    width: 40px;
+    height: 15px;
+    background: #3e3e3e;
+    box-shadow: 0 0 0 4px #303030;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.toggle input {
+    appearance: none;
+}
+.toggle span {
+    position: absolute;
+    left: 0px;
+    width: 15px;
+    height: 15px;
+    border-radius: 20px;
+    background-color: gray;
+    transition: 1s;
+}
+.toggle input:checked ~ span {
+    left: 25px;
+    background-color: white;
+}
+
+.select {
+    width: 80px;
+    height: 20x;
+    cursor: pointer;
+    background-color: white;
+    box-shadow: 0 2px 0 white;
+    border-radius: 2px;
+}
+.select::-ms-expand {
+      width: 0;
+      height: 40px;
+      position: absolute;
+      top: 0;
+      right: 0;
+}
+.select::after {
+        content: '\003E';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(-50%, -50%) rotate(90deg) scaleY(1.75);
+        color: #3e3e3e;
+        font-size: 28px;
+        pointer-events: none;
+        z-index: 2;
+        transition: all 250ms cubic-bezier(.4,.25,.3,1);
+        opacity: .6;
+      }
+      
+.select:hover::after {opacity: 1}
+  
+.select:checked::after {transform: translate(-50%, -50%) rotate(90deg) scaleX(-1) scaleY(1.75);}

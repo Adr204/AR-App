@@ -1,0 +1,37 @@
+/* .backBtn {
+
+} */
+
+.miniIcon {
+    position: relative;
+    margin: 5px;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+}
+.miniIcon span {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background-image: url(../assets/haguruma.png);
+    background-size: auto 40px;
+    background-repeat: no-repeat;
+}
+.miniIcon #home {
+    background-image: url(../assets/home.png);
+}
+.miniIcon #haguruma {
+    background-image: url(../assets/haguruma.png);
+}
+
+.bigIcon {
+    position: absolute;
+    left: 15px;
+    bottom: 80px;
+
+    width: 100px;
+    height: 80px;
+    background-image: url(../assets/qr.png);
+    background-size: auto 80px;
+    background-repeat: no-repeat;
+}

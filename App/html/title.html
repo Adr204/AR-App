@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>すごろくますたぁ</title>
+    <link rel="stylesheet" href="../css/title.css">
+    <script src="../setup/ruby.js"></script>
+</head>
+<body>
+    <div id="frame">
+        <div class="title">
+            <text class="hiragana katakana">
+                すごろくますたぁ
+            </text>
+            <text class="kanji">
+                <ruby>双六<rt>すごろく</rt>掌握<rt>ますたぁ</rt></ruby>
+            </text>
+        </div>
+        <div class="main">
+            <a href="./main.html" class="link">
+                <span id="circleBtn">
+                    はじめる
+                </span>
+            </a>
+        </div>
+        <div class="news">
+            <img src="../assets/info.png" alt="" id="info">
+            <span class="message">
+                表示崩れについて
+            </span>
+        </div>
+    </div>
+</body>
+<script>
+    document.getElementsByClassName("news")[0].addEventListener("click",() => {alert("僕の技術力じゃどうにもできませんでした。\nゆるして")});
+</script>
+</html>

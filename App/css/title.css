@@ -1,0 +1,73 @@
+#frame {
+    width: 375px;
+    height: 667px;
+    background-color:antiquewhite;
+}
+
+.title {
+    display: inline-flex;
+    margin: 4%;
+    width: 92%;
+    height: 30%;
+    /* background-color: pink; */
+    align-items: center;
+    justify-content: center;
+}
+.title text {
+    font-family: "STKaiti", "HGP行書体", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+    font-size: 40px;
+}
+
+.main {
+    display: inline-flex;
+    margin: 4%;
+    width: 92%;
+    height: 50%;
+    /* background-color: lightblue; */
+    align-items: end;
+    justify-content: center;
+}
+#circleBtn {
+    border-radius: 50%;
+    outline: none;
+    display: inline-block;
+    line-height: 160px;
+    height: 160px;
+    width: 160px;
+    text-align: center;
+    font-size: 28px;
+    font-family: "Hiragino Maru Gothic ProN W4";
+    color: #fff;
+    background-color: rgb(191, 150, 55);
+    border-bottom: 4px solid rgb(127, 108, 23);
+    cursor: pointer;
+    transition: 0.3s ease all;
+}
+#circleBtn:hover{
+    border-bottom-width:0;
+    transform:translateY(4px)
+}
+
+
+.news {
+    display: inline-flex;
+    margin: 4%;
+    width: 92%;
+    height: 8%;
+    /* background-color: lightsalmon; */
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.news .message {
+    font-size: 16px;
+    font-family: serif;
+}
+#info {
+    width: 32px;
+    height: auto;
+}
+
+.link {
+    text-decoration: none;
+}

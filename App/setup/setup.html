@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setting</title>
+    <script src="./settting.js"></script>
+    <script src="./ruby.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div id="frame">
+        <a href="../main/main.html">
+            <button id="backBtn">
+                <span id="backImg">
+                </span>
+            </button>
+        </a>
+
+        <div id="list">
+            <div class="item">
+                <label for="ruby" class="toggle">
+                    <input type="checkbox" name="" id="ruby">
+                    <span></span>
+                </label>
+                <text class="hiragana katakana">ふりがなをふる</text>
+                <text class="kanji">ふり<ruby>仮名<rp>(</rp><rt>がな</rt><rp>)</rp></ruby>をふる</text>
+            </div>
+            <div class="item">
+                <select name="" id="setText" class="select">
+                    <option value="hiragana">ひらがな</option>
+                    <option value="katakana">カタカナ</option>
+                    <option value="kanji">漢字</option>
+                </select>
+                <span></span>
+            </div>
+            <div class="item"></div>
+            <div class="item"></div>
+
+        </div>
+    </div>
+</body>
+</html>
