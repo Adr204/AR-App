@@ -32,11 +32,13 @@
     align-items: center;
     justify-content: center;
     border-radius: 20% 0 0 20% / 35% 0 0 35%;
+    /* 配置調整用 */
+    background-color: cadetblue;
+}
+.turn text {
     font-size: 24px;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
-    /* 配置調整用 */
-    background-color: cadetblue;
 }
 
 .character {
