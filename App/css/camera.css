@@ -59,17 +59,8 @@
 .arrow {
     font-size: 40px;
 }
-.arBtn {
-    opacity: 30%;
-}
-.arBtn:hover {
-    opacity: 100%;
-}
-.arBtn:hover ~ .qrBtn {
-    opacity: 30%;
-}
 .qrBtn {
-    opacity: 100%;
+    opacity: 30%;
 }
 
 .main {
@@ -115,4 +106,5 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     align-items: center;
     justify-content: center;
+    opacity: 30%;
 }
