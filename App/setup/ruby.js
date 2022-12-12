@@ -2,7 +2,8 @@ window.addEventListener("DOMContentLoaded", () => {
     // 書式を変更するテキストを全て非表示に
     const text = [...document.getElementsByTagName("text")];
     text.forEach(e => e.style.display = "none");
-    console.log(text);
+    // ひらがな→カタカナ→漢字 に置き換えることってなんて言えばいいの?
+    console.info("変更可能な文字列のリスト", text);
 
     // localStorageから設定を取得
     const textType = localStorage.getItem("textType") || "hiragana";
