@@ -13,8 +13,30 @@ window.addEventListener("load", () => {
         Canv.drawResult(random);
         console.log(random);
     })
+
+    const miniIcons = [...document.getElementsByClassName("miniIcon")];
+    miniIcons.forEach(item => {
+        item.addEventListener("click", () => {
+            clickMiniIcon(item.id);
+        })
+    })
+    const dialogs = [...document.getElementsByClassName("dialog")];
+    dialogs.forEach(item => {
+        item.addEventListener("click", e => {
+            console.log(e.target.closest(".dialog-container"))
+            if(e.target.closest(".dialog-container") === null) {
+                item.close();
+            }
+        })
+    })
+
+    const backBtn = document.getElementById("backBtn");
+    backBtn.addEventListener("click", () => {
+        location.href = "./title.html";
+    })
 })
 
+/* 以下宣言系 */
 class MasterCanvas {
     /**
      * 
@@ -173,5 +195,16 @@ class Dice extends MasterCanvas {
         _x += this.coe.diceFrameSize*(x*2-1)/6;
         _y += this.coe.diceFrameSize*(y*2-1)/6;
         return [_x, _y]
+    }
+}
+
+function clickMiniIcon(id) {
+    console.log(id);
+    let dialog = id == "setup" ? document.getElementById("setupPage")
+                : id == "home" ? document.getElementById("alert")
+                : id == "page" ? document.getElementById("modify")
+                : null;
+    if(dialog) {
+        dialog.showModal();
     }
 }

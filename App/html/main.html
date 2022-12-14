@@ -6,113 +6,135 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>メインメニュー</title>
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/modal.css">
     <script src="../js/main.js"></script>
     <script src="../setup/ruby.js"></script>
 </head>
 <body>
     <div id="frame">
-        <div class="top">
-            <div class="title">
-                <text class="hiragana katakana">すごろくますたぁ</text>
-                <text class="kanji">
-                    <ruby>
-                        双六<rt>すごろく</rt>
-                        掌握<rt>ますたぁ</rt>
-                    </ruby>
-                </text>
-            </div>
-            <div class="turn">
-                <text class="hiragana">3たーんめ</text>
-                <text class="katakana">
-                    3
-                    <ruby>
-                        ターン<rt>たーん</rt>
-                    </ruby>
-                    め
-                </text>
-                <text class="kanji">
-                    3
-                    <ruby>
-                        ターン<rt>たーん</rt>
-                    </ruby>
-                    <ruby>
-                        目<rt>め</rt>
-                    </ruby>
-                </text>
-            </div>
-        </div>
-        <div class="label">
-            <text class="hiragana">
-                さんかぷれいやー
-            </text>
-            <text class="katakana">
-                さんか
-                <ruby>
-                    プレイヤー<rt>ぷれいやー</rt>
-                </ruby>
-            </text>
-            <text class="kanji">
-                <ruby>
-                    参加<rt>さんか</rt>
-                </ruby>
-                <ruby>
-                    プレイヤー<rt>ぷれいやー</rt>
-                </ruby>
-            </text>
-        </div>
-        <div class="character">
-            <div class="cell">
-                <span>えどがわ</span>
-                <img src="../assets/pickgram/dash.png" alt="" class="plus">
-            </div>
-            <div class="cell">
-                <span>こじま</span>
-                <img src="../assets/pickgram/man_key.png" alt="" class="plus">
-            </div>
-            <div class="cell">
-                <span>よしだ</span>
-                <img src="../assets/pickgram/woman_pic.png" alt="" class="plus">
-            </div>
-            <div class="cell">
-                <span>つぶらや</span>
-                <img src="../assets/pickgram/munk.png" alt="" class="plus">
-            </div>
-        </div>
-        <div class="ui">
-            <div class="qr">
-                <a href="./camera.html" class="qrWrapper">
-                    <img src="../assets/qr.png" alt="">
-                </a>
-            </div>
-            <div class="dice">
-                <canvas id="canvas"></canvas>
-            </div>
-            <div class="mini">
-                <div class="setup miniWrapper">
-                    <img src="../assets/haguruma.png" alt="">
+        <div class="topWrapper">
+            <div class="top">
+                <div class="title">
+                    <text class="hiragana katakana">すごろくますたぁ</text>
+                    <text class="kanji">
+                        <ruby>
+                            双六<rt>すごろく</rt>
+                            掌握<rt>ますたぁ</rt>
+                        </ruby>
+                    </text>
                 </div>
-                <a href="./title.html" class="home miniWrapper">
-                    <img src="../assets/home.png" alt="">
-                </a>
+                <div class="turn">
+                    <text class="hiragana">3たーんめ</text>
+                    <text class="katakana">
+                        3
+                        <ruby>
+                            ターン<rt>たーん</rt>
+                        </ruby>
+                        め
+                    </text>
+                    <text class="kanji">
+                        3
+                        <ruby>
+                            ターン<rt>たーん</rt>
+                        </ruby>
+                        <ruby>
+                            目<rt>め</rt>
+                        </ruby>
+                    </text>
+                </div>
             </div>
         </div>
-        <div class="modal">
-
-        </div>
-        <!-- <a href="./title.html">
-
-            <div class="miniIcon">
-                <span id="home">
-                </span>
+        <div class="main">
+            <div class="label">
+                <text class="hiragana">
+                    さんかぷれいやー
+                </text>
+                <text class="katakana">
+                    さんか
+                    <ruby>
+                        プレイヤー<rt>ぷれいやー</rt>
+                    </ruby>
+                </text>
+                <text class="kanji">
+                    <ruby>
+                        参加<rt>さんか</rt>
+                    </ruby>
+                    <ruby>
+                        プレイヤー<rt>ぷれいやー</rt>
+                    </ruby>
+                </text>
+                <hr>
             </div>
-        </a>
-        <div class="miniIcon">
-            <span id="haguruma"></span>
+            <div class="character">
+                <div class="cell">
+                    <span>えどがわ</span>
+                    <img src="../assets/pickgram/dash.png" alt="" class="plus">
+                </div>
+                <div class="cell">
+                    <span>こじま</span>
+                    <img src="../assets/pickgram/man_key.png" alt="" class="plus">
+                </div>
+                <div class="cell">
+                    <span>よしだ</span>
+                    <img src="../assets/pickgram/woman_pic.png" alt="" class="plus">
+                </div>
+                <div class="cell">
+                    <span>つぶらや</span>
+                    <img src="../assets/pickgram/munk.png" alt="" class="plus">
+                </div>
+            </div>
+            <div class="ui">
+                <div class="qr">
+                    <a href="./camera.html" class="qrImgWrapper">
+                        <img src="../assets/qr.png" alt="">
+                    </a>
+                </div>
+                <div class="dice">
+                    <canvas id="canvas"></canvas>
+                </div>
+                <div class="mini">
+                    <div id="setup" class="miniIcon">
+                        <img src="../assets/miniIcon/gear.png" alt="">
+                    </div>
+                    <div id="home" class="miniIcon">
+                        <img src="../assets/miniIcon/home.png" alt="">
+                    </div>
+                    <div id="page" class="miniIcon">
+                        <img src="../assets/miniIcon/page.png" alt="">
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="bigIcon">
-            <img src="../assets/qr.png" alt="">
-            <span></span>
-        </div> -->
+        <dialog id="alert" class="dialog">
+            <div class="dialog-container">
+            タイトル画面に戻りますか?
+            <button id="backBtn">OK</button>
+        </div>
+        </dialog>
+        <dialog id="modify" class="dialog">
+            <div class="dialog-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="2">カスタムマス設定項目 テンプレート</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td contenteditable="true">右の</td><td>人がサイコロを</td><td contenteditable="true">1回振る</td>
+                        </tr>
+                        <tr>
+                            <td contenteditable="true">一番後ろの</td><td>人がサイコロを</td><td contenteditable="true">2回振る</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </dialog>
+        <dialog id="setupPage" class="dialog">
+            <div class="dialog-container">
+                
+            </div>
+        </dialog>
     </div>
 </body>
 </html>
