@@ -21,30 +21,34 @@
         <!-- </a-marker> -->
         
       <a-entity camera></a-entity>
-      <a-marker type="pattern" url="../assets/pattern/pattern-A.patt">
-        <a-entity gltf-model="#Air" scale="0.2 0.2 0.2"></a-entity>
-        <!-- <a-box position="0 -1 0" scale="1 1 1" color="grey"></a-box> -->
+      <a-marker type="pattern" url="../assets/pattern/pattern-A.patt" id="pattA">
+        <a-entity gltf-model="#Air" scale="0.18 0.18 0.18"></a-entity>
       </a-marker>
-      <a-marker type="pattern" url="../assets/pattern/pattern-C.patt">
-        <a-entity gltf-model="#Brave" scale="0.2 0.2 0.2" rotation="0 180 0"></a-entity>
+      <a-marker type="pattern" url="../assets/pattern/pattern-C.patt" id="pattC">
+        <a-entity gltf-model="#Brave" scale="0.18 0.18 0.18" rotation="0 180 0"></a-entity>
       </a-marker>
-
-
-      <!-- <a-marker type="pattern" url="pattern/pattern-A.patt">
+      
+      <a-marker type="pattern" url="../assets/pattern-cell/pattern-dinner.patt" id="dinner" class="cell">
         <a-box position="0 -1 0" scale="1 1 1" color="grey"></a-box>
       </a-marker>
-      <a-marker type="pattern" url="pattern/pattern-B.patt">
+      <a-marker type="pattern" url="../assets/pattern-cell/pattern-present.patt" id="present" class="cell">
         <a-box position="0 -1 0" scale="1 1 1" color="grey"></a-box>
       </a-marker>
-      <a-marker type="pattern" url="pattern/pattern-C.patt">
+      <a-marker type="pattern" url="../assets/pattern-cell/pattern-windmill.patt" id="windmill" class="cell">
         <a-box position="0 -1 0" scale="1 1 1" color="grey"></a-box>
       </a-marker>
-      <a-marker type="pattern" url="pattern/pattern-D.patt">
-        <a-box position="0 -1 0" scale="1 1 1" color="grey"></a-box>
-      </a-marker>
-      <a-marker type="pattern" url="pattern/pattern-E.patt">
-        <a-box position="0 -1 0" scale="1 1 1" color="grey"></a-box>
-      </a-marker> -->
     </a-scene>
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        window.currentPattern = [];
+        [...document.getElementsByClassName("cell")].forEach(e => {
+          console.log(e);
+          e.addEventListener("markerFound", e => {
+            console.log(e.target.id);
+            window.currentPattern.push(e.target.id);
+          })
+        })
+      })
+    </script>
   </body>
 </html>

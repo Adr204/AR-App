@@ -34,7 +34,8 @@
 
 .switch {
     display: flex;
-    width: 70%;
+    margin-right: 5%;
+    width: 65%;
     height: 50%;
     align-items: center;
     justify-content: space-between;
@@ -55,12 +56,13 @@
     align-items: center;
     justify-content: center;
     transition: 1s;
+    opacity: 30%;
 }
 .arrow {
     font-size: 40px;
 }
-.qrBtn {
-    opacity: 30%;
+.active {
+    opacity: 100%;
 }
 
 .main {
