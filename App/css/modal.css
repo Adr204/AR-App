@@ -2,7 +2,7 @@ dialog {
     /* display: inline-block; */
     padding: 0;    
     border-radius: 2.5em / 2em;
-    width: 50%;
+    width: 60%;
     /* border-color: rgb(230, 160, 100); */
 }
 .dialog-container {
@@ -16,7 +16,7 @@ dialog {
     justify-content: center;
     background-color: rgb(210, 195, 150);
     color: rgb(90, 83, 62);
-    font-size: 0.8em;
+    font-size: 1em;
 }
 td[contenteditable=true] {
     background-color: rgb(230, 228, 222);
@@ -29,16 +29,16 @@ td[contenteditable=true] {
     border-color: burlywood;
 }
 .dialog-container {
-    animation: fadeModal .8s cubic-bezier(0.5, 1, 0.75, 1) 1 forwards;
+    animation: fadeModal .4s cubic-bezier(0.5, 1, 0.75, 1) 1 forwards;
 }
 @keyframes fadeModal {
     0% {
         opacity: 0;
-      }
-      75% {
+    }
+    75% {
+        opacity: 0.8;
+    }
+    100% {
         opacity: 1;
-      }
-      100% {
-        opacity: 1;
-      }
+    }
 }
